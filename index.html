@@ -18,6 +18,32 @@
         </div>
         <p id="disfil"></p>
     </header>
+    <main>
+
+        <div class="card text-center container">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="altskbtn" aria-current="true" href="#">All Tasks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pendbtn" aria-current="true" href="#">Pending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="comptskbtn" aria-current="true" href="#">Completed Tasks</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body" id="alltasks" style="display: flex; flex-direction: column-reverse;"></div>
+
+            <div class="card-body" id="pendingtasks" style="display: none;"></div>
+
+            <div class="card-body" id="Completedtasks" style="display: none;"></div>
+        </div>
+
+
+
+    </main>
 
 
     <script src="script.js"></script>
