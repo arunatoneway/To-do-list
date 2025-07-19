@@ -1,7 +1,6 @@
 
 let create = document.getElementById("button-addon2")
 let taskField = document.getElementById("taskField")
-let disfil = document.getElementById("disfil")
 let altskbtn = document.getElementById("altskbtn")
 let pendbtn = document.getElementById("pendbtn")
 let comptskbtn = document.getElementById("comptskbtn")
@@ -50,18 +49,12 @@ comptskbtn.addEventListener('click', () => {
 create.addEventListener('click', () => {
 
     let tasktext = taskField.value;
-    let a =""
+    let a = ""
 
     if (!tasktext) {
         taskField.placeholder = "Enter a task for creation";
 
     } else {
-
-
-        disfil.innerHTML = tasktext;
-        disfil.style.backgroundColor = "red";
-
-
 
         let task = document.createElement("div")
         task.style.display = 'flex';
@@ -140,17 +133,11 @@ create.addEventListener('click', () => {
 
             let modaldisp = new bootstrap.Modal(document.getElementById("modelEditview"))
             modaldisp.show()
-            editviewfield.value = discrip.innerText
-            savechgbtn.addEventListener('click', () => {
-                console.log(editviewfield.value)
+            editviewfield.innerHTML = tasktext
             
-                
+            console.log(discrip.innerText)
+        })
 
-        })
-        discrip.innerText =editviewfield.value
-        console.log(discrip.innerText)
-        })
-        
 
 
 
@@ -168,8 +155,10 @@ create.addEventListener('click', () => {
         discripP.setAttribute("data-bs-target", "#modelEditview")
 
 
-        let delebtn = document.createElement("button")
-        delebtn.appendChild(document.createTextNode("Delete"))
+        let delebtn = document.createElement("i")
+        delebtn.appendChild(document.createTextNode("cancel"))
+        delebtn.classList.add("material-icons")
+        delebtn.style.alignContent = "center"
         delebtn.style.height = "60px"
 
         delebtn.addEventListener('click', () => {
@@ -180,10 +169,11 @@ create.addEventListener('click', () => {
 
         })
 
-        let delebtnP = document.createElement("button")
-        delebtnP.appendChild(document.createTextNode("Delete"))
+        let delebtnP = document.createElement("i")
+        delebtnP.classList.add("material-icons")
+        delebtnP.appendChild(document.createTextNode("cancel"))
         delebtnP.style.height = "60px"
-
+        delebtnP.style.alignContent = "center"
         delebtnP.addEventListener('click', () => {
 
             taskP.style.display = "None"
